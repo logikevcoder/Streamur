@@ -32,7 +32,8 @@ class StreamCreate extends Component {
   // calls all of redux-forms submit properties
   onSubmit(formValues) {
     // event.preventDefault(); redux-form takes care of this
-    console.log(formValues);
+    // when onsubmit gets called the action creator createStream() gets called
+    this.props.createStream(formValues);
   }
 
   render() {
@@ -63,7 +64,12 @@ const validate = formValues => {
 };
 
 // pass in similar to redux connect component
-export default reduxForm({
+const formWrapped = reduxForm({
   form: 'streamCreate',
   validate,
 })(StreamCreate);
+
+export default connect({
+  null,
+  createStream
+})(formWrapped);
