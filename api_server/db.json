@@ -64,6 +64,12 @@
       "title": "awd",
       "description": "awdwa",
       "id": 13
+    },
+    {
+      "title": "Stream using new ID method",
+      "description": "Data from new id user post",
+      "userId": "115348918352998377197",
+      "id": 14
     }
   ]
 }
